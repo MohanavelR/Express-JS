@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main-container{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.main-container form{
+    background-color: rgb(66, 59, 59);
+    padding: 30px 30px;    
+    border-radius: 5px;
+    border: 1px solid rgb(82, 68, 68);
+}
+.main-container form h1{
+    text-align: center;
+}
+.main-container form div{
+  padding: 10px;
+  margin-top: 20px;
+}
+.main-container form div label{
+   display: block;
+   margin-bottom: 10px;
+}
+.main-container form div input{
+    width: 500px;
+}
+.main-container form footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.main-container form footer button{
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size: medium;
+    border: none;
+    color: rgb(6, 6, 72);
+    font-weight: 600;
+    background-color: aqua;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.main-container form footer button:hover{
+    background-color: rgb(198, 226, 226);
+}

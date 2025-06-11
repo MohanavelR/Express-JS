@@ -1,0 +1,16 @@
+<%-include('base/base.ejs') %>
+    <div class="main-container">
+          <form action="/upload" method="post" enctype="multipart/form-data" >
+            <h1>File Upload</h1>
+            <div>
+                <label for="">Choose Image File</label>
+                <input type="file" name="mypic" required>
+            </div>
+             <footer>
+                 <button type="submit">Upload</button>
+             </footer>
+        
+          </form>
+    </div>
+</body>
+</html>

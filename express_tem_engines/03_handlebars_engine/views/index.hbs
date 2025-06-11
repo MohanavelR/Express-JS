@@ -1,0 +1,9 @@
+
+    <h1>Home Page</h1>
+    {{#if courses}}
+    {{#each  courses}}
+      <li>{{this}}</li>
+    {{/each}}
+    {{else}}
+    <p>No courses</p>
+    {{/if}}

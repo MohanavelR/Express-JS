@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    {{doc_title}}
+    {% if programs %}
+    {% for program in programs %}
+    {{program}}
+    {% endfor %}
+    {% else %}
+        <p>no courses</p>
+    {% endif %}
+</body>
+</html>

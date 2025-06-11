@@ -1,0 +1,14 @@
+
+<%- include('layout/header.ejs') %> 
+<%= include('layout/header.ejs') %> 
+    
+<h1>Home Page</h1>
+     <% if(programs.length > 0){ %>
+     <% programs.forEach((pro)=>{ %>
+        <li><%= pro %> </li>
+     <% }) %>
+     <% } else { %>
+        <p>No Courses</p>
+      <% } %>  
+</body>
+</html>
