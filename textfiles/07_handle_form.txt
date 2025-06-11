@@ -1,0 +1,17 @@
+create form in response
+
+set name
+
+you want request data 
+
+request.body
+
+this show undefined
+
+you install body-parser package
+get body-parser
+set app.use(parser.urlencoded())
+
+this time show value
+
+

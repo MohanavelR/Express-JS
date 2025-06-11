@@ -1,0 +1,57 @@
+<h1 class="text-center">Node with MongoDB CRUD </h1>
+{{#if message }}
+<div class=" d-flex justify-content-end">
+ <p id="message" class="bg-success p-3 me-3 text-white fw-bold" >{{message}}</p>
+</div>
+{{/if}}
+<div class="" >
+{{#if edit_id }}    
+    <h1 class="ps-4">Edit Book</h1>
+<form class="d-flex p-3 " method="post" action="/update_book/{{edit_id}}" >
+  <div class="">
+    <input type="text" name="title" value="{{book.title}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+  </div>
+  <div class="ms-3">
+    {{!-- <label class="d-inline" for="exampleInputPassword1">Author:</label> --}}
+    <input type="text" value="{{book.author}}" name="author" class="form-control" id="exampleInputPassword1" placeholder="Enter Author name">
+  </div>
+  <div class="d-flex align-items-center ms-3">
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+{{else}}
+<h1 class="ps-4">Add Book</h1>
+<form class="d-flex p-3 " method="post" action="/store-book" >
+  <div class="">
+    <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+  </div>
+  <div class="ms-3">
+    <input type="text" name="author" class="form-control" id="exampleInputPassword1" placeholder="Enter Author name">
+  </div>
+  <div class="d-flex align-items-center ms-3">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+{{/if}}
+</div>
+<table class="table">
+  <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th colspan="2" >Action</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{#each emps}}
+       <tr>
+          <td>{{this.title}}</td>
+          <td>{{this.author}}</td>
+          
+          <td><a href="/?edit_id={{this._id}}" class="btn btn-primary">Update</a></td>
+          <td><a href="delete_book/{{this._id}}" class="btn btn-danger">Delete</a></td>
+       </tr>
+       {{/each}}
+  </tbody>
+</table>

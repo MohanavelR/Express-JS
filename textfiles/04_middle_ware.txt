@@ -1,0 +1,25 @@
+Middle ware is handle request
+All url request handle in single block That is Very complex
+
+
+Middle ware function is "use function"
+
+create express app
+
+app.use()
+
+arguments pass a function
+
+That function argument (request,response,next)
+
+---
+
+You created Three Middle wares but Only go first Middle ware 
+
+you want  go to second Middle ware  .You called  next function in first Middle ware
+you want go to third Middle ware . you called next function in second Middle ware
+you want go to next next Middle wares . you called next function in before Middle ware 
+app.use((req,res,next)=>{
+     // content
+     next()
+})

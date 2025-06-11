@@ -1,0 +1,20 @@
+import get express 
+require('express')
+store any name(express)
+const express=require('express')
+
+express is a function
+
+store the another const  any name(app)
+const app=express()
+
+create a server 
+createServer(app)
+
+that server arguments pass app
+set port
+
+run server 
+
+
+

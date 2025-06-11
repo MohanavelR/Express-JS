@@ -1,0 +1,54 @@
+
+<h1 class="text-center text-primary ">User Management System</h1>
+{{#if message }}
+
+  <div class="alert message alert-success bg-success fw-bold text-white  position-absolute">{{message}}</div>
+
+{{/if}}
+ {{!-- <form class="col-12 d-flex mt-3 justify-content-center">
+  <div class="col-4">
+    <input type="text" class="form-control ps-4 rounded-end-0 search-input" id="inputPassword2" placeholder="Search">
+  </div>
+  <div class="col-2">
+    <button type="submit" class="btn btn-primary rounded-start-0 search-btn mb-3 col-11"><img src="/images/" alt=""> Search</button>
+  </div>
+</form> --}}
+  <div class="d-flex justify-content-end col-12 px-5">
+  <a href="/create" class="btn btn-warning circle col-1"> <i class="fa-solid fa-plus me-1"></i>New</a>
+  </div>
+
+<div class="table-responsive mt-2">
+<table class="table table-success table-striped">
+   <thead class="bg-secondary">
+    <tr class="bg-secondary">
+        <th class="text-center">S.No</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Age</th>
+        <th class="text-center">City</th>
+        <th class="text-center" colspan="2" >Activity</th>
+    </tr>
+   </thead>
+   <tbody>
+      {{#if users}}
+      {{#each users}}
+       <tr>
+        <td class="text-center">{{serial @index}}</td>
+        <td class="text-center">{{this.name}}</td>
+        <td class="text-center">{{this.age}}</td>
+        <td class="text-center">{{this.city}}</td>
+        <td class="text-center"><a class="btn btn-primary " href="/update?id={{this.id}}">
+        <i class="fa-solid fa-pencil"></i>  </a> 
+        <a onclick="return confirm('Are You Sure To Delete ?')" class="btn btn-dark" href="/delete?id={{this.id}}"><i class="fa-solid fa-trash"></i> </a></td>
+       </tr>
+       {{/each}}
+      {{else}}
+       <tr>
+          <td  class="text-center" colspan="6">No Details</td>
+       </tr>
+      {{/if}}
+      <tr>
+        <td class="text-center " colspan="5"> <a href="/create">Add</a></td>
+      </tr>
+   </tbody>
+</table>
+</div>

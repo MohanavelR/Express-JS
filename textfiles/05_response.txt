@@ -1,0 +1,8 @@
+node use write function in response
+
+you set content type etc..
+
+but express have "send" function
+it no need set content type this like dynamic
+this understating what type data
+

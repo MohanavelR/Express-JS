@@ -1,0 +1,12 @@
+Middle ware function "use"
+
+app.use("path",function())
+
+use('/',function()) This shouldn't first middle ware
+must be last Middle ware because this is being first middle not move next 
+
+"/home","/login" ... all always here "/" First middle check there stay not move
+
+use(function()) This is always Running go to any middle ware this running 
+
+this Not Routing This only Middle Ware
